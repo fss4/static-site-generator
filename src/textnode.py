@@ -34,7 +34,6 @@ def split_nodes_delimiter(old_nodes, delimiter, text_type):
         new_nodes_text = (node.text).split(f"{delimiter}")
         check = 0
         for new in new_nodes_text:
- #NEED TO DEAL WIITH THE CASE WHEN THE NODE IS AT THE FRONT OF THE SENTENCE. THERE IS A EMPTY STRING THAT NEEDS TO BE DEALT WITH CORRECTLY.
             if check % 2 == 1:
                 new_nodes.append(TextNode(new, text_type))
             else:
