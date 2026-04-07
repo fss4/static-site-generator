@@ -1,27 +1,34 @@
 from textnode import *
 from htmlnode import *
-from mdreader import *
+from mdinlinereader import *
+from mdblockreader import *
+import sys
+import os
 
 def main():
-    '''
-    dummy = TextNode("hello world",TextType.TEXT)
-    test = text_node_to_html_node(dummy)
-    print(dummy)
-    print(test.to_html())
-    node = TextNode("This is a link node", TextType.LINK, "www.google.com")
-    html_node = text_node_to_html_node(node)
-    print(html_node.to_html() )
-    leaf = LeafNode('p','Hello World!')
-    print(leaf.to_html())
-    text = "This is text with a link [to boot dev](https://www.boot.dev) and two images ![obi wan](https://i.imgur.com/fJRm4Vk.jpeg) and ![rick roll](https://i.imgur.com/aKaOqIh.gif)"
-    print(extract_markdown_images(text))
-    print(extract_markdown_links(text))
-    node = TextNode(text,TextType.TEXT,)
-    print('-'*100)
-    print(node)
-    print("-"*100)
-    print(split_nodes_link([node]))
-    '''
-    text = "This is **text** with an _italic_ word and a `code block` and an ![obi wan image](https://i.imgur.com/fJRm4Vk.jpeg) and a [link](https://boot.dev)"
-    print(text_to_textnodes(text))
+    md = """
+            ### This is a heading
+
+            ####### This should be a paragraph
+            
+            ```
+            def func():
+                pass
+            ```
+            
+            > “I have not failed. I've just found 10,000 ways that won't work.”
+            > -Thomas Edison
+
+            - This is a list
+            - with items
+            
+            1. This is an ordered list.
+            2. With items
+            """
+    blocks = markdown_to_blocks(md)
+    for block in blocks:
+        block_to_block_type(block)
+    
+    print(sys.path)
+    print("PYTHONPATH =", os.environ.get("PYTHONPATH"))
 main()

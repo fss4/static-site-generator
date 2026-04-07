@@ -1,9 +1,9 @@
 import unittest
 
 from textnode import *
-from mdreader import *
+from mdinlinereader import *
 
-class TestMDreaderFuncs(unittest.TestCase):
+class TestMDInlineReaderFuncs(unittest.TestCase):
     def test_converter1(self):
         node = TextNode("This is text with a `code block` word", TextType.TEXT)
         new_nodes = split_nodes_delimiter([node], "`", TextType.CODE)
@@ -270,6 +270,7 @@ class TestMDreaderFuncs(unittest.TestCase):
             ],
             new_nodes,
         )
+
     
         
 if __name__ == "__main__":
