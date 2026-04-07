@@ -122,5 +122,6 @@ class TestHTMLNode(unittest.TestCase):
         self.assertEqual(html_node.value, "")
         html_result = html_node.to_html()
         self.assertEqual(html_result, '<img src="https://www.boot.dev/img/bootdev-logo-full-150.png" alt="boot dot dev logo" />')
+        
 if __name__ == "__main__":
     unittest.main()

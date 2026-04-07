@@ -3,6 +3,7 @@ from htmlnode import *
 from mdreader import *
 
 def main():
+    '''
     dummy = TextNode("hello world",TextType.TEXT)
     test = text_node_to_html_node(dummy)
     print(dummy)
@@ -12,8 +13,15 @@ def main():
     print(html_node.to_html() )
     leaf = LeafNode('p','Hello World!')
     print(leaf.to_html())
-    text = "This is text with a link [to boot dev](https://www.boot.dev) and [to youtube](https://www.youtube.com/@bootdotdev) and two images\
-        ![obi wan](https://i.imgur.com/fJRm4Vk.jpeg), ![rick roll](https://i.imgur.com/aKaOqIh.gif)"
+    text = "This is text with a link [to boot dev](https://www.boot.dev) and two images ![obi wan](https://i.imgur.com/fJRm4Vk.jpeg) and ![rick roll](https://i.imgur.com/aKaOqIh.gif)"
     print(extract_markdown_images(text))
     print(extract_markdown_links(text))
+    node = TextNode(text,TextType.TEXT,)
+    print('-'*100)
+    print(node)
+    print("-"*100)
+    print(split_nodes_link([node]))
+    '''
+    text = "This is **text** with an _italic_ word and a `code block` and an ![obi wan image](https://i.imgur.com/fJRm4Vk.jpeg) and a [link](https://boot.dev)"
+    print(text_to_textnodes(text))
 main()
