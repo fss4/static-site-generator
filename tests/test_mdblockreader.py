@@ -4,7 +4,7 @@ from textnode import *
 from mdinlinereader import *
 from mdblockreader import *
 
-class TestMDInlineReaderFuncs(unittest.TestCase):
+class TestMDblockReaderFuncs(unittest.TestCase):
     def test_markdown_to_blocks(self):
         md = """
             This is **bolded** paragraph

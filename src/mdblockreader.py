@@ -15,8 +15,8 @@ def markdown_to_blocks(markdown):
     new_blocks = []
     
     for block in blocks:
+        block = block.replace("    ", "\t")
         new_blocks.append("".join(block.strip()))
-    
     new_blocks = list(filter(None,new_blocks))
     return new_blocks
 
