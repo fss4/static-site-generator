@@ -74,7 +74,7 @@ def text_to_children(block):
         lines = block.split('\n')
         new_lines = []
         for line in lines:
-            if line[1] == " ":
+            if line.startswith("> "):
                 new_lines.append(line[2:])
             else:
                 new_lines.append(line[1:])

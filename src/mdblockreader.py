@@ -64,3 +64,9 @@ def block_to_block_type(block):
     else:
         return BlockType.PARA
     
+def extract_title(md):
+    if md.startswith("# "):
+        first_line = md.split("\n\n")[0].strip()
+        return first_line[2:]
+    else:
+        raise Exception('This file has no h1 header.  This should be a block at the beginning of the markdown file that starts with "# ".')

@@ -1,3 +1,6 @@
+#generated directories
+public/
+
 # python-related files
 __pycache__/
 
