@@ -2,12 +2,16 @@
 --------------
 This is a very simple static site generator which I have continued to modify after completing the corresponding [course](https://www.boot.dev/courses/build-static-site-generator-python) on [boot.dev](https://www.boot.dev).
 
-The basic operation is as follows:
+## Syntax
+
+The basic syntax is as follows:
 
 1. Put all desired images, PDFs etc. under `static/assets`
 2. If you would like to use a favicon name it `favicon.png` and put it in `static`
 3. Any `CSS` formatting should be done in `index.css`
 4. Design your webserver file structure in `content`.  Your main page should be a `.md` file inside of this directory, any further pages should be stored in subdirectories of `content` also as `.md` files.
+
+#### Block Formatting
 
 At this moment the supported markdown block syntax includes:
 
@@ -19,6 +23,8 @@ At this moment the supported markdown block syntax includes:
 - normal paragraphs 
 
 All blocks are seperated by double newlines.
+
+#### Inline Formatting
 
 Inline markdown syntax that is supported is
 - `code`
