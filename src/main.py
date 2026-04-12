@@ -1,15 +1,12 @@
-from textnode import *
-from htmlnode import *
-from mdinlinereader import *
-from mdblockreader import *
-from mdtohtml import *
 from utils import *
 
 import sys
-import os
-import shutil
 
 def main():
-    copy_dir("static","public")
-    generate_page_recursive("content", "template.html", "public")
+    if len(sys.argv) == 2:
+        basepath = sys.argv[1]
+    else:
+        basepath = "/"
+    copy_dir("static","docs")
+    generate_page_recursive("content", "template.html", "docs", basepath)
 main()

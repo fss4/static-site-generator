@@ -9,7 +9,9 @@ def copy_dir(src, tgt, plog=False):
     # Note: this is reading from cwd.  So it sees if it can find these dirs in the one you run the script (main.py) in
     log = ""
     try:
-        if os.path.exists(src) and os.path.exists(tgt):
+        if os.path.exists(src):
+            if not os.path.exists(tgt):
+                os.makedirs(tgt)
             if os.listdir(tgt):
                 log += f"removing all objects in {tgt}...\n"
                 if plog: print(f"removing all objects in {tgt}...")
@@ -45,7 +47,7 @@ def copy_dir(src, tgt, plog=False):
         print("-"*65)
         print(log)
 
-def generate_page(from_path, template_path, dest_path):
+def generate_page(from_path, template_path, dest_path, basepath):
     print(f"Generating page from {from_path} to {dest_path} using {template_path}")
     with open(from_path, 'r') as file:
         md = file.read()
@@ -55,24 +57,25 @@ def generate_page(from_path, template_path, dest_path):
     node = markdown_to_html_node(md)
     html = node.to_html()
     title = extract_title(md)
+    
     temp = temp.replace("{{ Title }}", title)
     temp = temp.replace("{{ Content }}", html)
+    temp = temp.replace('href="/', f'href="{basepath}')
+    temp = temp.replace('src="/', f'src="{basepath}')
     
     dir_name = os.path.dirname(dest_path)
     os.makedirs(dir_name,exist_ok=True)
     with open(dest_path, "w") as file:
         file.write(temp)
         
-def generate_page_recursive(dir_path_content, template_path, dest_dir_path):
-    print(os.listdir(dir_path_content))
+def generate_page_recursive(dir_path_content, template_path, dest_dir_path, basepath):
     for obj in os.listdir(dir_path_content):
-        print(obj)
         obj_path = os.path.join(dir_path_content, obj)
         if os.path.isfile(obj_path):
             regex = r"\w+"
             matches = re.findall(regex, obj)[0]
             dest_file_path = os.path.join(dest_dir_path, f"{matches}.html")
-            generate_page(obj_path, template_path, dest_file_path)
+            generate_page(obj_path, template_path, dest_file_path, basepath)
         else:
             new_dest_dir_path = os.path.join(dest_dir_path, obj)
-            generate_page_recursive(obj_path, template_path, new_dest_dir_path)
+            generate_page_recursive(obj_path, template_path, new_dest_dir_path, basepath)
