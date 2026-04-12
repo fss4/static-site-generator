@@ -79,3 +79,6 @@ def generate_page_recursive(dir_path_content, template_path, dest_dir_path, base
         else:
             new_dest_dir_path = os.path.join(dest_dir_path, obj)
             generate_page_recursive(obj_path, template_path, new_dest_dir_path, basepath)
+            
+
+    

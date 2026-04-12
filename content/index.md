@@ -1,46 +1,45 @@
-# Tolkien Fan Club              
+# EXAMPLE              
 
-![JRR Tolkien sitting](/images/tolkien.png)
+![stock construction photo](/assets/stock.jpg)
 
-Here's the deal, **I like Tolkien**.
+## All Lorem Ipsum on this page was generated using [this site](https://www.lipsum.com/)
 
-> "I am in fact a Hobbit in all but size."
->
-> -- J.R.R. Tolkien
+**Lorem ipsum dolor sit amet**, _consectetur adipiscing elit_. Pellentesque a nunc ut est tincidunt eleifend sed ut risus. Etiam tempus consequat magna.
 
-## Blog posts
+> Duis accumsan, tellus id volutpat feugiat, velit nisi porta nisl, in consectetur diam dui in mauris.
+> Nulla condimentum, turpis ut dictum ullamcorper, nisl est mollis ante, ac iaculis erat justo sed magna.
+> Duis porta eu velit in convallis.
 
-- [Why Glorfindel is More Impressive than Legolas](/blog/glorfindel)
-- [Why Tom Bombadil Was a Mistake](/blog/tom)
-- [The Unparalleled Majesty of "The Lord of the Rings"](/blog/majesty)
+## EXAMPLE LINKS
 
-## Reasons I like Tolkien
+- [More Lorem](/post/more)
+- [Other Lorem](/post/other)
 
-- You can spend years studying the legendarium and still not understand its depths
-- It can be enjoyed by children and adults alike
-- Disney _didn't ruin it_ (okay, but Amazon might have)
-- It created an entirely new genre of fantasy
+## UNORDERED LISTS
 
-## My favorite characters (in order)
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- In in quam scelerisque, feugiat erat id, cursus leo.
+- Nunc tempor libero et quam ultrices laoreet.
+- Vivamus in nisi semper, vehicula dolor at, molestie felis.
 
-1. Gandalf
-2. Bilbo
-3. Sam
-4. Glorfindel
-5. Galadriel
-6. Elrond
-7. Thorin
-8. Sauron
-9. Aragorn
+## ORDERED LISTS
 
-Here's what `elflang` looks like (the perfect coding language):
+1. Duis elementum dolor quis blandit dictum.
+2. Aliquam ut erat ut dui sollicitudin blandit sit amet sed enim.
+3. Curabitur vel dui nec nulla porta dictum.
+4. Nunc rhoncus diam et justo ultrices dictum.
+5. Fusce pharetra odio non consectetur pulvinar.
+
+## CODE BLOCK
+
+Lorem ipsum dolor sit amet, `consectetur adipiscing elit`. Nunc vel felis luctus, consequat nunc et, laoreet risus. Donec sollicitudin sit amet orci et ullamcorper.
 
 ```
-func main(){
-    fmt.Println("Aiya, Ambar!")
-}
+def main():
+    dolor = pain
+    print(f"Lorem ipsum {dolor} sit amet")
 ```
 
 Want to get in touch? [Contact me here](/contact).
 
-This site was generated with a custom-built [static site generator](https://www.boot.dev/courses/build-static-site-generator-python) from the course on [Boot.dev](https://www.boot.dev).
+This site was generated with a custom-built [static site generator](https://www.boot.dev/courses/build-static-site-generator-python) modified from the course on [Boot.dev](https://www.boot.dev).
