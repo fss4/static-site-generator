@@ -6,4 +6,4 @@
 read -p "Input the name of the GitHub Repo you would like to store the site tree in: " repo
 read -p "What is the path to the root directory of the site generator from the pwd? " genpath
 
-python3 {$genpath}/src/main.py /$repo/ $genpath
+python3 $genpath/src/main.py /$repo/ $genpath

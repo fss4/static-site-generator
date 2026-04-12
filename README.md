@@ -36,11 +36,11 @@ Once the site is ready to be published to the internet this can be done easily v
 1. Make a [GitHub](https://github.com) repo and name it whatever you like.
 2. from the directory where you would like the public repo to be stored on your machine run `bash [PATH_TO_SITE_GENERATOR]/build.sh` where the term in brackets should be replaced by the appropriate path.  For example if you want to build the public site tree in a directory `site` on the same level as the root directory of the generator which is named `gen` you should make `site` your working directory and run `bash ../gen/build.sh`.
 3. You will be prompted for the name of the repo you made in GitHub and the path to the site generator.  Using the previous example the repo is `site` and the path is `../gen`.
-4. The generator will create a directory in the pwd called `public` and populate it.
+4. The generator will create a directory in the pwd called `docs` and populate it.
 5. [push the local repository to GitHub](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github)
 6. Go to settings in the repository and then under Code and Automation go to the Pages tab.
 7. Set the branch to whatever the branch of the GitHub repo you've created is (there should only be one if you are using a brand new repo) it is likely either `main` or `master`.
-8. Set the folder to the `public` folder that was generated and save.
+8. Set the folder to the `docs` folder that was generated and save.
 
 You should now be able to access your site at `https://{Your GitHub username}.github.io/{repository name}`!
 
